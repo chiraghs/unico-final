@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5368 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-Web_1920_2);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        opacity: 0.89;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#002549"/>
+      <stop offset="0.234" stop-color="#002549"/>
+      <stop offset="0.454" stop-color="#043564"/>
+      <stop offset="0.618" stop-color="#052c53"/>
+      <stop offset="0.707" stop-color="#032e58"/>
+      <stop offset="1" stop-color="#053d67"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_41" data-name="Rectangle 41" class="cls-1" width="2721" height="1080" transform="translate(-277)"/>
+    </clipPath>
+    <clipPath id="clip-Web_1920_2">
+      <rect width="5368" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_2" data-name="Web 1920 – 2" class="cls-2">
+    <rect class="cls-5" width="5368" height="1080"/>
+    <g id="Mask_Group_1" data-name="Mask Group 1" class="cls-3" transform="translate(2444 1080) rotate(180)">
+      <g id="wave" class="cls-4" transform="translate(-129.076 -4.015)">
+        <g id="OBJECTS">
+          <path id="Path_1472" data-name="Path 1472" class="cls-1" d="M2578.8,1088.031H736.5a119.956,119.956,0,0,0-9.013-22.828c-22.921-44.231-70.528-70.095-116-81.029-52.377-12.575-106.613-8.332-158.464-25.213-54.886-17.872-94.378-59.873-113.489-120.552-22.147-70.311-18.863-149.884-41.753-221-25.554-79.48-82.67-91.746-150.1-105.126-55.382-11-109.68-41.815-134.769-101.162C-15.673,343.442,8.7,276.909,32.925,213.1,58.51,145.672,48.908,71.179,52.656,0H2578.8Z" transform="translate(-0.001)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

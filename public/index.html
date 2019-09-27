@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+    <style >
+        @import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
+      * {
+        box-sizing: border-box;
+      }
+      
+      header,
+      section {
+        overflow-x: hidden;
+      }
+      
+      :root {
+        --Sniglet-font: "Sniglet", cursive;
+        --Rubik: "Rubik", cursive;
+        --Patua: "Patua One", cursive;
+        --Lobster: "lobster", cursive;
+        --light-black: #2e2c2caf;
+        --bggradient: linear-gradient(to top, #010014, #002549);
+        --light-gray: rgba(255, 255, 255, 0.877);
+      }
+      
+      header a {
+        font-family: var(--Sniglet-font);
+        font-size: 0.9em;
+        color: white;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #d8d9f13f;
+        min-width: 160px;
+        box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: white;
+        font-size: 13px;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: rgba(255, 255, 255, 0.205);
+        color: #FADC06;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      header .nav-item:last-child {
+        padding-right: 10.5em;
+      }
+      
+      header .nav-item {
+        padding: 0.9em;
+      }
+      
+      header .navbar-brand {
+        padding-left: 8rem;
+      }
+      
+      header .nav-link:hover {
+        color: #FADC06;
+      }
+      
+      header .row .col-md-7 {
+        padding: 22vmin 1vmin;
+        padding-bottom: 35vmin;
+      }
+      
+      header .row .col-md-5 {
+        padding: 4.2vmin 1vmin;
+      }
+      
+      header .row .col-md-5 img {
+        width: 90%;
+      }
+      
+      header {
+        background: #FADC06;
+        /* fallback for old browsers */
+        background: var(--bggradient);
+      }
+      
+      header .container .col-md-7 {
+        font-family: "Rubik", sans-serif;
+      }
+      
+      header .container .col-md-7 h6 {
+        padding: 1vmin;
+        letter-spacing: 4px;
+      }
+      
+      header .container .col-md-7 h1 {
+        font-size: 8.5vmin;
+        font-weight: bold;
+        padding: 0.1em 0em;
+      }
+      
+      header .container .col-md-7 p {
+        padding: 1vmin 5vmin;
+      }
+      
+      .primary-btn {
+        border-radius: 30px;
+        font-weight: bold;
+      }
+      .primary-btn :hover{
+        background-color: #FADC06;
+      }
+      /********** section 1 **************/
+      
+      .section-1 {
+        padding: 20vmin 0vmin;
+      }
+      
+      .section-1 .row .col-md-6 .pray img {
+        opacity: 0.8;
+        width: 80%;
+        border-radius: 0.2em;
+      }
+      
+      .section-1 .row .col-md-6:last-child {
+        position: relative;
+      }
+      
+      .section-1 .row .col-md-6 .panel {
+        position: absolute;
+        top: 7vmin;
+        left: -18vmin;
+        background: white;
+        border-radius: 3px;
+        text-align: left;
+        padding: 13vmin 5vmin 20vmin 10vmin;
+        box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+        font-family: var(--Rubik);
+        z-index: 1;
+      }
+      
+      .section-1 .row .col-md-6 .panel h1 {
+        font-weight: bold;
+        padding: 0.4em 0;
+        font-size: 2em;
+      }
+      
+      .section-1 .row .col-md-6 .panel p {
+        font-size: 0.9em;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      
+      /*  Section 2  */
+      
+      .cover {
+        width: 100%;
+        height: 55vmin;
+        background: url("../assets/pexels-photo-452738.jpeg");
+        background-position: -24rem -19rem;
+        background-size: 150%;
+        position: relative;
+      }
+      
+      .cover .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+      }
+      
+      .cover .content {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        padding-top: 19vmin;
+      }
+      
+      .cover .content > h1 {
+        font-family: var(--Patua);
+        font-size: 6vmin;
+        color: whitesmoke;
+      }
+      
+      .cover .content > p {
+        font-family: var(--Rubik);
+        font-size: 2vmin;
+        color: #e5e5e5;
+      }
+      
+      .numbers .rect {
+        position: relative;
+        z-index: 1;
+        background: white;
+        width: 17rem;
+        height: 12rem;
+        padding-top: 3.5vmin;
+        margin: 1rem;
+        border-radius: 0.5em;
+        box-shadow: 1px 2px 5px 1px rgba(250, 221, 6, 0.24);
+      }
+      
+      .numbers {
+        margin-top: -15vmin;
+      }
+      
+      .numbers .rect h1 {
+        font-size: 5rem;
+        color: #FADC06;
+      }
+      
+      .numbers .rect > p {
+        font-family: var(--Patua);
+      }
+      
+      .purchase > h1 {
+        padding-top: 15vmin;
+        padding-bottom: 0.1em;
+        font-family: var(--Lobster);
+      }
+      
+      .purchase > p {
+        color: var(--light-black);
+        font-size: 3vmin;
+        padding-bottom: 10vmin;
+      }
+      
+      .purchase .cards .card {
+        width: 22rem;
+        margin: 3vmin 3vmin;
+      }
+      
+      .cards div {
+        padding: 0;
+        margin: 0;
+      }
+      
+      .cards .title {
+        background: rgba(208, 241, 241, 0.199);
+        padding: 1.4em 2.5em;
+        font-size: 2vmin;
+      }
+      
+      .card .card-text {
+        padding: 2.5rem 3rem;
+        color: var(--light-black);
+      }
+      
+      .card-body .pricing {
+        background: rgba(208, 241, 241, 0.199);
+        border-top-right-radius: 170px;
+        border-top-left-radius: 170px;
+      }
+      
+      .card-body .pricing > h1 {
+        font-size: 10vmin;
+        padding: 1em 0.5em;
+      }
+      
+      /* Section 3 */
+      
+      .section-3 {
+        height: 70vmin;
+        margin-top: 15vmin;
+        background: var(--bggradient);
+      }
+      
+      .section-3 .col-md-12 > h1 {
+        padding: 2em 0 0.5em 0;
+        color: whitesmoke;
+        font-size: 6vmin;
+      }
+      
+      .section-3 .col-md-12 > p {
+        padding: 0 4em;
+        padding-bottom: 2em;
+        color: var(--light-gray);
+        font-size: 3vmin;
+      }
+      
+      .section-3 .desktop {
+        background: white;
+        display: inline-block;
+        border-radius: 3em;
+        padding: 2vmin 4.5vmin;
+        margin: 1em;
+      }
+      
+      .section-3 .desktop h3 {
+        font-size: 4vmin;
+      }
+      
+      .section-3 .desktop p {
+        font-size: 2vmin;
+      }
+      
+      /* Section Team */
+      
+      .section-4 .container h1 {
+        font-size: 6vmin;
+        padding-top: 14vmin;
+      }
+      
+      .section-4 .team {
+        padding: 10vmin 4vmin;
+      }
+      
+      .section-4 .card {
+        width: 22em;
+        margin-top: 10vmin;
+      }
+      
+      .section-4 .card .card-text {
+        padding: 0.5em;
+      }
+      
+      .section-4 .card-body > a {
+        font-size: 1.5em;
+      }
+      
+      .section-4 .carousel-item {
+        padding-left: 3rem;
+      }
+      
+      .border-radius {
+        border-radius: 340px;
+        width: 60%;
+      }
+      
+      footer {
+        background: rgba(0, 0, 0, 0.815);
+        overflow-x: hidden;
+        padding: 14vmin 18vmin;
+      }
+      
+      footer p > span {
+        color: #FADC06;
+      }
+      
+      footer input {
+        border: none !important;
+      }
+      
+      footer input::placeholder {
+        color: white !important;
+      }
+      
+      footer .input-group .input-group-text {
+        background: var(--bggradient);
+        border: none;
+      }
+      
+      footer .column i {
+        color: #FADC06;
+      }
+      
+      /* It is Adjacent sibling combinator */
+      
+      footer .column i + i {
+        padding: 0 0.5em;
+      }
+      
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.815);
+        z-index: 9999;
+        transition: all 1.5s ease;
+      }
+
+      
+      @media only screen and (max-width: 768px) {
+  header .navbar-brand {
+    padding-left: 1rem;
+  }
+  .section-1 .row .col-md-6 .panel {
+    position: initial;
+    width: initial;
+    height: initial;
+  }
+  .section-2 .cover {
+    background-position: -25vmin -10vmin;
+  }
+  .numbers .rect {
+    width: 10rem;
+    height: 8rem;
+  }
+  .numbers .rect h1 {
+    font-size: 2rem;
+  }
+
+  .section-3 {
+    height: inherit;
+    padding: 10vmin !important;
+  }
+  .section-3 .row h1 {
+    padding: 6vmin 4vmin;
+  }
+  .section-3 .platform .col-md-6 {
+    text-align: center !important;
+  }
+  .section-3 .desktop i {
+    font-size: 8vmin;
+  }
+  .section-4 .carousel-item {
+    padding-left: 0.6rem;
+  }
+  footer .row .col-md-2 {
+    margin-top: 8vmin;
+  }
+}
+
+/* screen size 375px */
+
+@media only screen and (max-width:400 px) {
+  .section-4 .card {
+    width: 18em;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .section-4 .carousel-inner {
+    margin-left: -4vmin;
+  }
+}
+          </style>
+
+    
+  </head>
+  <body>
+      
+    <header>
+      <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">
+            <img src="logo.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-align-right text-light"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">HOME
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TEAM</a>
+              </li>
+              <li class="nav-item dropdown">
+                <div class="dropdown">
+                  <a href="#" class="nav-link">SERVICES</a>
+                  <div class="dropdown-content">
+                    
+                      <a href="#">BRANDING AND CORPORATE IDENTITY</a>
+                      <a href="#">WEB DESIGN & DEVELOPMENT</a>   
+                      <a href="UXUI.html">UXUI DESIGN</a>
+                      <a href="#">MOBILE APP DEVELOPMENTS</a>
+                      <a href="#">CONTENT MARKETING</a>
+                      <a href="#">DIGITAL MARKETING</a>
+                      <a href="#">PRESENTATIONS</a>
+                      <a href="#">VIDEOGRAPHY</a>
+                      <a href="#">SEARCH ENGINE OPTIMIZATION</a>
+                      <a href="#">SOCIAl MEDIA MARKETING</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PORTFOLIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT US</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+   
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-7 col-sm-12  text-white">
+            <h6>U Dream,We Create</h6>
+            <h1>UNICO GRAPHIX</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusamus eum dignissimos ipsa sequi expedita.
+            </p>
+            <button class="btn btn-light px-5 py-2 primary-btn">
+              See Services
+            </button>
+            <button class="btn btn-light px-5 py-2 primary-btn">
+                See Our Work
+              </button>
+             <a><img src="play.png"></a>
+          </div>
+          <div class="col-md-5 col-sm-12  h-25">
+            <img src="../assets/header-img.png" alt="Book" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-1">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <div class="pray">
+                <img src="../assets/pexels-photo-1904769.jpeg" alt="Pray" class="" />
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="panel text-left">
+                <h1>Mr. Devid Smith</h1>
+                <p class="pt-4">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere iure adipisci harum ducimus accusantium, repudiandae aperiam
+                  voluptatum, id ex ratione omnis reiciendis possimus officiis.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae, tenetur quidem eum aliquid vel labore sint placeat
+                  ad deserunt consectetur fugit ullam. Eius unde neque ducimus obcaecati ipsum quos vero totam recusandae hic
+                  expedita nemo sit, illum harum. Quisquam impedit ullam itaque facere et ad molestiae quod reprehenderit excepturi!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-2 container-fluid p-0">
+        <div class="cover">
+          <div class="overlay"></div>
+          <div class="content text-center">
+            <h1>Some Features That Made Us Unique</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eum?
+            </p>
+          </div>
+        </div>
+        <div class="container-fluid text-center">
+          <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+            <div class="rect">
+              <h1>2345</h1>
+              <p>Happy Client</p>
+            </div>
+            <div class="rect">
+              <h1>6784</h1>
+              <p>Cups Coffee</p>
+            </div>
+            <div class="rect">
+              <h1>1056</h1>
+              <p>Tickets Submitted</p>
+            </div>
+            <div class="rect">
+              <h1>9152</h1>
+              <p>Total Projects</p>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="purchase text-center">
+          <h1>Purchase Whatever You Want</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <div class="cards">
+            <div class="d-flex flex-row justify-content-center flex-wrap">
+              <div class="card">
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="card-title">PDF</h5>
+                  </div>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in.
+                  </p>
+                  <div class="pricing">
+                    <h1>$77.99</h1>
+                    <a href="#" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="card-title">E-book</h5>
+                  </div>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in.
+                  </p>
+                  <div class="pricing">
+                    <h1>$99.99</h1>
+                    <a href="#" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="card-title">Print Copy</h5>
+                  </div>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in.
+                  </p>
+                  <div class="pricing">
+                    <h1>$58.99</h1>
+                    <a href="#" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-3 container-fluid p-0 text-center">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <h1>Download Our App for all Platform</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum exercitationem alias perspiciatis omnis quod possimus odit
+              voluptatum! Sunt ea quasi praesentium, tenetur doloribus animi obcaecati, sint nemo quae laudantium iusto unde
+              eaque nostrum nobis voluptatum
+            </p>
+          </div>
+        </div>
+        <div class="platform row">
+          <div class="col-md-6 col-sm-12 text-right">
+            <div class="desktop shadow-lg">
+              <div class="d-flex flex-row justify-content-center">
+                <i class="fas fa-desktop fa-3x py-2 pr-3"></i>
+                <div class="text text-left">
+                  <h3 class="pt-1 m-0">Desktop</h3>
+                  <p class="p-0 m-0">On website</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 text-left">
+            <div class="desktop shadow-lg">
+              <div class="d-flex flex-row justify-content-center">
+                <i class="fas fa-mobile-alt fa-3x py-2 pr-3"></i>
+                <div class="text text-left">
+                  <h3 class="pt-1 m-0">On Mobile</h3>
+                  <p class="p-0 m-0">On Play Store</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Section 4 -->
+      <section class="section-4">
+        <div class="container text-center">
+          <h1 class="text-dark">What our Reader's Say about us</h1>
+          <p class="text-secondary">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="team row ">
+          <div class="col-md-4 col-12 text-center">
+              <div class="card mr-2 d-inline-block shadow-lg">
+                  <div class="card-img-top">
+                    <img src="../assets/UI-face-3.jpg" class="img-fluid border-radius p-4" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Blalock Jolene</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo dolor soluta assumenda
+                      minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+                    </p>
+                    <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+                    <p class="text-black-50">CEO at saffae</p>
+                  </div>
+                </div>
+          </div>
+          <div class="col-md-4 col-12">
+              <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                  <div class="carousel-inner text-center">
+                    <div class="carousel-item active">
+                      <div class="card mr-2 d-inline-block shadow">
+                        <div class="card-img-top">
+                          <img src="../assets/UI-face-1.jpg" class="img-fluid rounded-circle w-50 p-4" alt="">
+                        </div>
+                        <div class="card-body">
+                          <h3 class="card-title">Allen Agnes</h3>
+                          <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo dolor soluta assumenda
+                            minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+                          </p>
+                          <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+                          <p class="text-black-50">CEO at saffae</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card  d-inline-block mr-2 shadow">
+                        <div class="card-img-top">
+                          <img src="../assets/UI-face-2.jpg" class="img-fluid rounded-circle w-50 p-4" alt="">
+                        </div>
+                        <div class="card-body">
+                          <h3 class="card-title">Amiel Barbara</h3>
+                          <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo dolor soluta assumenda
+                            minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+                          </p>
+                          <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+                          <p class="text-black-50">CEO at saffae</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+          </div>
+          </div>
+          <div class="col-md-4 col-12 text-center">
+              <div class="card mr-2 d-inline-block shadow-lg">
+                  <div class="card-img-top">
+                    <img src="../assets/UI-face-4.jpg" class="img-fluid border-radius p-4" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Olivia Louis</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo dolor soluta assumenda
+                      minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+                    </p>
+                    <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+                    <p class="text-black-50">CEO at saffae</p>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container-fluid p-0">
+        <div class="row text-left">
+          <div class="col-md-5 col-sm-5">
+            <h4 class="text-light">About us</h4>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum maxime ea similique illum corrupti</p>
+            <p class="pt-4 text-muted">Copyright ©2019 All rights reserved | This is made with by
+              <span> UNICO GRAPHIX</span>
+            </p>
+          </div>
+          <div class="col-md-5 col-sm-12">
+            <h4 class="text-light">Newsletter</h4>
+            <p class="text-muted">Stay Updated</p>
+            <form class="form-inline">
+              <div class="col pl-0">
+                <div class="input-group pr-5">
+                  <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fas fa-arrow-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-2 col-sm-12">
+            <h4 class="text-light">Follow Us</h4>
+            <p class="text-muted">Let us be social</p>
+            <div class="column text-light">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
+    
+ 
+    <script>
+      let nCount = selector => {
+  $(selector).each(function () {
+    $(this)
+      .animate({
+        Counter: $(this).text()
+      }, {
+        // A string or number determining how long the animation will run.
+        duration: 4000,
+        // A string indicating which easing function to use for the transition.
+        easing: "swing",
+        /**
+         * A function to be called for each animated property of each animated element. 
+         * This function provides an opportunity to
+         *  modify the Tween object to change the value of the property before it is set.
+         */
+        step: function (value) {
+          $(this).text(Math.ceil(value));
+        }
+      });
+  });
+};
+
+let a = 0;
+$(window).scroll(function () {
+  // The .offset() method allows us to retrieve the current position of an element  relative to the document
+  let oTop = $(".numbers").offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() >= oTop) {
+    a++;
+    nCount(".rect > h1");
+  }
+});
+
+
+
+/**
+ *
+ *  sticky navigation
+ *
+ */
+
+let navbar = $(".navbar");
+
+$(window).scroll(function () {
+  // get the complete hight of window
+  let oTop = $(".section-2").offset().top - window.innerHeight;
+  if ($(window).scrollTop() > oTop) {
+    navbar.addClass("sticky");
+  } else {
+    navbar.removeClass("sticky");
+  }
+});
+
+
+
+$(document).ready(function() {
+    $('#headerVideoLink').magnificPopup({
+      type:'inline',
+      midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    });         
+  });
+    </script>
+  </body>
+</html>
